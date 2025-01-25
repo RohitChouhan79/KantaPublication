@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Navbar } from "./componets/HomePage/Navbar";
+import Homepage from "./componets/HomePage/Homepage";
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <Navbar />
 
 {/* add a hero section 2  */}
-
+<Homepage/>
 
 
 {/*  add blue  */}
