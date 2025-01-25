@@ -1,7 +1,7 @@
+import Homepage from "@/components/HomePage/Homepage";
+import Invite from "@/components/HomePage/Invite";
+import { Navbar } from "@/components/HomePage/Navbar";
 import Image from "next/image";
-import { Navbar } from "./componets/HomePage/Navbar";
-import Homepage from "./componets/HomePage/Homepage";
-import Invite from "./componets/HomePage/Invite";
 
 
 export default function Home() {
