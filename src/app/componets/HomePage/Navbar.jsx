@@ -1,8 +1,22 @@
 import Link from "next/link";
-import { ShoppingCart } from "lucide-react";
+import {   ShoppingCart } from "lucide-react";
 
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+
+
+
+
+// when we  use client  -------1 imp point 25 jan 
+
+
+
+
+
+
+
+
+
 
 const navItems = [
   { name: "Home", href: "/" },
