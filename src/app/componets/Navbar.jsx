@@ -16,12 +16,13 @@ const navItems = [
 // MobileNav Component
 function MobileNav() {
   return (
-    <Sheet>
+    <div className="">
+      <Sheet>
       <SheetTrigger className="md:hidden">
         <Menu className="h-6 w-6" />
         <span className="sr-only">Toggle menu</span>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+      <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-slate-100">
         <nav className="flex flex-col gap-4   ">
           {navItems.map((item) => (
             <Link
@@ -35,6 +36,7 @@ function MobileNav() {
         </nav>
       </SheetContent>
     </Sheet>
+    </div>
   );
 }
 
@@ -42,7 +44,7 @@ function MobileNav() {
 export function Navbar() {
   return (
    <>
-    <nav className="sticky top-0 z-50 bg-white border-b-2 border-red-400 rounded-lg">
+    <nav className="sticky top-0 z-50 bg-white border-b-2 border-red-400 rounded-lg px-10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Mobile Menu */}
@@ -51,7 +53,7 @@ export function Navbar() {
           </div>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 ">
             <div className="relative w-10 h-10 md:w-10 md:h-10">
               <svg viewBox="0 0 40 40" className="w-full h-full text-[#272974]">
                 <path
