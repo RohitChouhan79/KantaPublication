@@ -1,12 +1,24 @@
 import React from 'react';
+import About from './About';
+import { Navbar } from '@/components/HomePage/Navbar';
+import Footer from '@/components/HomePage/Footer';
+import Team from './Team';
+import Publication from './Publication';
+
 
 async function Page() {
 
 
   return (
     <div>
-        <h1>About</h1>
-        <p>This is the about page</p>
+
+<Navbar/>
+
+<About/>
+<Publication/>
+<Team/>
+
+<Footer/>
     </div>
   );
 }
