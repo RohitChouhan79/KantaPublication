@@ -2,6 +2,13 @@ import Homepage from "@/components/HomePage/Homepage";
 import Invite from "@/components/HomePage/Invite";
 import { Navbar } from "@/components/HomePage/Navbar";
 import Image from "next/image";
+import Slogan from "@/components/HomePage/Slogan";
+
+
+
+
+
+
 
 
 export default function Home() {
@@ -18,6 +25,7 @@ export default function Home() {
 
 {/*  add blue  */}
 <Invite/>
+<Slogan/>
 
 
       </div>
