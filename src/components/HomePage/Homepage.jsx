@@ -2,13 +2,15 @@ import React from 'react';
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-8 p-4">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-5 ">
       {/* Heading Section */}
-      <div className="md:w-1/2 text-center">
+      <div className="md:w-1/2 text-center ">
         <h1 className="text-2xl md:text-5xl font-extrabold leading-tight font-serif">
-          <span className="text-blue-600">Kanta Publication</span> house is here
+          <span className="text-blue-600">Kanta Publication</span> <span className='text-gray-800 text-xl'>is a leading publication
+          house is here
           with a passion for preserving Indian culture and traditions through
           writings.
+          </span>
         </h1>
 
         {/* Button Section */}

@@ -6,11 +6,11 @@ const Invite = () => {
       
       {/* First Section with Full Width */}
       <div className="bg-purple-700 p-8 rounded-lg shadow-xl mb-8 w-full">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg text-center">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg text-center">
           We invite interested people to research, learn, and write with us
-          about India’s culture, manuscripts, treaties, tradition, and everything.
+          about India’s culture,  manuscripts, treaties, tradition, and everything.
         </h1>
-        <p className="text-xl md:text-2xl text-gray-200 font-semibold text-center">
+        <p className="text-lg md:text-2xl text-gray-200 font-semibold text-center">
           Write and Publish with Us
         </p>
       </div>
