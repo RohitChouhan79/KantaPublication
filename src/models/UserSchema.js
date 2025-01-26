@@ -23,8 +23,9 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['admin'], // Allows only these values
-    required: true,
+    default:'admin',
+    // enum: ['admin'], // Allows only these values
+    // required: true,
   },
 }, {
   timestamps: true, // Automatically add `createdAt` and `updatedAt` fields
