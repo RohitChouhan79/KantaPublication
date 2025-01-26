@@ -1,7 +1,7 @@
 import React from "react";
 import { FaInstagram, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({user}) => {
   return (
     <footer className="bg-gray-900 text-gray-200 py-8 mt-5">
       {/* Logo and Social Media Section */}

@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 // MobileNav Component
-function MobileNav() {
+function MobileNav({ userRole }) {
   return (
     <div>
       <Sheet>
@@ -32,6 +32,15 @@ function MobileNav() {
                 {item.name}
               </Link>
             ))}
+            {/* Conditional Dashboard Link */}
+            {userRole && (
+              <Link
+                href="/dashboard"
+                className="block px-4 py-2 text-lg text-white hover:text-[#F07347] transition-colors"
+              >
+                Dashboard
+              </Link>
+            )}
           </nav>
         </SheetContent>
       </Sheet>
@@ -40,7 +49,7 @@ function MobileNav() {
 }
 
 // Navbar Component
-export function Navbar() {
+export function Navbar({ userRole }) {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-2 border-red-400 rounded-lg px-4 py-3 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
@@ -67,6 +76,15 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
+          {/* Conditional Dashboard Link */}
+          {userRole && (
+            <Link
+              href="/dashboard"
+              className="text-lg lg:text-xl text-gray-700 hover:text-[#F07347] transition-colors whitespace-nowrap font-medium"
+            >
+              Dashboard
+            </Link>
+          )}
         </div>
 
         {/* Shopping Cart */}
@@ -80,7 +98,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <MobileNav />
+          <MobileNav userRole={userRole} />
         </div>
       </div>
     </nav>
