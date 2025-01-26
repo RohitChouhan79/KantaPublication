@@ -3,7 +3,7 @@ import React from "react";
 const Invite = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen p-6                "
+      className="flex flex-col items-center justify-center min-h-screen p-6 border-b-4 border-red-400  "
      
     >
       {/* First Section with Full Width */}

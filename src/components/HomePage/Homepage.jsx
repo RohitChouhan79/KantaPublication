@@ -2,9 +2,9 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-200 flex flex-col items-center justify-center px-6 py-12">
+    <div className=" bg-gradient-to-br from-blue-50 via-white to-blue-200 flex flex-col items-center justify-center px-6 py-12 border-b-4 border-red-400 ">
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center    max-w-7xl mx-auto">
         {/* Left Content */}
         <div
           className="text-center md:text-left md:w-1/2"
