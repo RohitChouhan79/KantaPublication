@@ -11,8 +11,8 @@ const Homepage = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight font-serif text-gray-900">
-            <span className="text-blue-600 hover:underline hover:text-blue-700 transition-all duration-300">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight font-thin text-gray-900">
+            <span className="text-[#F07347]  hover:text-[#F07347] transition-all duration-300">
               Kanta Publication
             </span>
           </h1>

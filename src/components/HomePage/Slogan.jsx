@@ -2,7 +2,7 @@ import React from "react";
 
 const Slogan = () => {
   return (
-    <div className="flex flex-col md:flex-row p-6 md:p-10 bg-gradient-to-br from-indigo-200 via-purple-300 to-pink-200 shadow-2xl rounded-3xl border border-gray-200 mx-auto w-full max-w-7xl mt-7">
+    <div className="flex flex-col md:flex-row p-6 md:p-10 bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-500 shadow-2xl rounded-3xl border border-gray-200 mx-auto w-full max-w-7xl mt-7">
       {/* Logo Section */}
       <div className="transform transition-transform duration-300 hover:scale-110 mb-6 md:mb-0 flex justify-center md:justify-start">
         <img
