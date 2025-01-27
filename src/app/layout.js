@@ -1,7 +1,8 @@
-import { Didact_Gothic, Inter } from "next/font/google";
+import { Poppins, Didact_Gothic } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Import fonts
+const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400"] });
 const didactGothic = Didact_Gothic({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
@@ -12,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} ${didactGothic.className}`}
-      >
+      <body className={`${poppins.className} ${didactGothic.className}`}>
         {children}
       </body>
     </html>
