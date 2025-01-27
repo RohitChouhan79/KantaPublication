@@ -5,11 +5,11 @@ const Invite = () => {
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-50">
       {/* First Section with Full Width */}
       <div
-        className="bg-gradient-to-r from-purple-500 to-purple-600 p-8 rounded-lg shadow-xl mb-8 w-full"
+        className="bg-gradient-to-r from-purple-400 to-purple-500 p-8 rounded-lg shadow-xl mb-8 w-full"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h1 className="text-xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6 drop-shadow-lg text-center transition-transform duration-500 ease-in-out hover:scale-105">
+        <h1 className="text-lg md:text-2xl lg:text-3xl font- text-gray-800 leading-tight mb-6 drop-shadow-lg text-center transition-transform duration-500 ease-in-out hover:scale-105">
           We invite interested people to research, learn, and write with us
           about India’s culture, manuscripts, treaties, tradition, and everything.
         </h1>

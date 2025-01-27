@@ -18,7 +18,7 @@ const Homepage = () => {
           </h1>
 
           {/* Paragraph with animation */}
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-800 mt-4 leading-relaxed font-semibold tracking-normal transition-all duration-500 ease-in-out transform hover:scale-105 hover:translate-x-2">
+          <p className="text-base md:text-lg lg:text-xl text-gray-800 mt-4 leading-relaxed font-semibold tracking-normal transition-all duration-500 ease-in-out transform hover:scale-105 hover:translate-x-2">
             is a leading publication house with a passion for preserving
             <span className="text-blue-700 font-bold"> Indian culture </span>
             and traditions through writings.
