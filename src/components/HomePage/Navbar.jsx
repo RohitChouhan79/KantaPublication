@@ -53,7 +53,7 @@ export function Navbar() {
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="text-[#F07347] text-2xl md:text-3xl font-serif font-semibold">Kanta Publication</span>
+          <span className="text-[#F07347] text-xl md:text-2xl font-serif font-semibold">Kanta Publication</span>
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -62,7 +62,7 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-lg lg:text-xl text-gray-700 hover:text-[#F07347] transition-colors whitespace-nowrap font-medium"
+              className="text-base lg:text-lg text-gray-700 hover:text-[#F07347] transition-colors whitespace-nowrap font-medium"
             >
               {item.name}
             </Link>
@@ -70,13 +70,13 @@ export function Navbar() {
         </div>
 
         {/* Shopping Cart */}
-        <Link
+        {/* <Link
           href="/cart"
           className="p-2 hover:text-[#F07347] transition-colors ml-auto"
         >
           <ShoppingCart className="h-6 w-6 text-black" />
           <span className="sr-only">Shopping Cart</span>
-        </Link>
+        </Link> */}
 
         {/* Mobile Menu */}
         <div className="md:hidden">

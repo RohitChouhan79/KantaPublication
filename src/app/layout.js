@@ -1,9 +1,8 @@
-import { Poppins, Didact_Gothic } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
 // Import fonts
-const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400"] });
-const didactGothic = Didact_Gothic({ subsets: ["latin"], weight: "400" });
+const poppins = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} ${didactGothic.className}`}>
+      <body className={`${poppins.className}`}>
         {children}
       </body>
     </html>
