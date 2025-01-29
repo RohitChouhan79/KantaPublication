@@ -2,7 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 // Import fonts
-const poppins = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"] });
+const poppins = Roboto({ subsets: ["latin"], weight: ["100", "300"] });
 
 export const metadata = {
   title: "Create Next App",
