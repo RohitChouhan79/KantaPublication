@@ -1,4 +1,6 @@
 import React from "react";
+import { Roboto } from "next/font/google";
+const poppins = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"] });
 
 const Homepage = () => {
   return (
@@ -11,8 +13,8 @@ const Homepage = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-extrabold leading-tight text-gray-900">
-            <span className="text-[#F07347] hover:text-[#F07347] transition-all duration-300">
+          <h1 className={`text-3xl md:text-5xl lg:text-6xl  font-extrabold ${poppins.className} leading-tight text-gray-900`}>
+            <span className="text-black hover:text-[#F07347] transition-all duration-300">
               Kanta Publication
             </span>
           </h1>
