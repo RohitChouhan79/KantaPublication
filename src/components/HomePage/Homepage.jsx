@@ -1,11 +1,16 @@
 import React from "react";
 import { Roboto } from "next/font/google";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 const Homepage = () => {
   return (
-    <div className={`bg-gradient-to-br from-blue-50 via-white to-blue-200 flex flex-col items-center justify-center px-6 py-12 border-b-4 border-red-400 ${roboto.className}`}>
+    <div
+      className={`bg-gradient-to-br from-blue-50 via-white to-blue-200 flex flex-col items-center justify-center px-6 py-12 border-b-2 border-black ${roboto.className}`}
+    >
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto">
         {/* Left Content */}
@@ -14,17 +19,17 @@ const Homepage = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          <h1 className="text-xl md:text-2xl lg:text-3xl  text-gray-900">
-            <span className="text-black hover:text-[#F07347] transition-all duration-300">
+          <h1 className="text-xl md:text-2xl lg:text-4xl  text-gray-900 ">
+            <span className="text-black  hover:text-blue-700 font-bold                   transition-all duration-300">
               Kanta Publication
             </span>
           </h1>
 
           {/* Paragraph with animation */}
-          <p className="text-base md:text-base lg:text-base text-gray-800 mt-4 leading-relaxed font-medium tracking-normal transition-all duration-500 ease-in-out transform hover:scale-105 hover:translate-x-2">
+          <p className="text-base md:text-base lg:text-xl text-gray-800 mt-4 leading-relaxed font-medium tracking-normal ">
             is a leading publication house with a passion for preserving{" "}
-            <span className="text-blue-700 font-bold">Indian culture</span>{" "}
-            and traditions through writings.
+            <span className="text-blue-700 font-bold">Indian culture</span> and
+            traditions through writings.
           </p>
 
           {/* Button Section */}
@@ -48,10 +53,11 @@ const Homepage = () => {
           <img
             src="/Book.jpeg"
             alt="Featured book from Kanta Publication"
-            className="rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 transform hover:scale-110"
+            className="rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 transform hover:scale-105"
           />
         </div>
       </div>
+        
     </div>
   );
 };
