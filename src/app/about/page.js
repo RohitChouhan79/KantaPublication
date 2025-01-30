@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './About';
-import { Navbar } from '@/components/HomePage/Navbar';
+import  Navbar from '@/components/HomePage/Navbar';
 import Footer from '@/components/HomePage/Footer';
 import Team from './Team';
 import Publication from './Publication';

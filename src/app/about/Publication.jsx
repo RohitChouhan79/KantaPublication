@@ -1,63 +1,61 @@
-import { BookOpen, Users, Globe, Lightbulb } from "lucide-react";
+'use client';
 
-const Publication = () => {
+import { BookOpen, Users, Globe, Lightbulb } from 'lucide-react';
+
+export default function Publication() {
   return (
-    <div className="min-h-screen py-12 px-6 bg-gray-50 flex justify-center">
-      <div className="max-w-3xl w-full">
-        {/* Header Section */}
-        <header className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">Kanta Publication</h1>
-          <p className="text-lg sm:text-xl text-gray-600 italic mt-4">
-            Preserving Indian culture and traditions through the art of writing
-          </p>
-        </header>
+    <div className="min-h-screen bg-white">
+      {/* Orange Banner */}
+      <div className="w-full bg-[#F7A034] py-16 mb-8">
+        <h1 className="text-center text-[3.5rem] font-serif text-black">About Us</h1>
+      </div>
 
-        {/* About Section */}
-        <section className="bg-white p-8 rounded-lg shadow-md mb-10">
-          <p className="text-lg text-gray-700 mb-4">
-            Kanta Publication House is dedicated to preserving Indian culture and traditions through the written word.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Our primary objective is to encourage older generations to document their experiences and knowledge, ensuring that their values live on for future generations.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            We focus on themes from ancient manuscripts and treaties, aiming to use timeless wisdom to solve modern challenges.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Our first publication, <span className="font-bold">"Units of Measurement through Ancient Treaties"</span>, explores how ancient temples and wells were built with remarkable precision, highlighting the methods our ancestors used to tackle challenges still relevant today.
-          </p>
-          <p className="text-lg text-gray-700">
-            Our vision is to contribute to India’s journey as a "Vishwa Guru," sharing the wisdom once spread across the world and promoting global peace through education and enlightenment.
-          </p>
-        </section>
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Main Content */}
+        <div className="prose prose-lg max-w-none">
+          <h2 className="text-3xl font-serif mb-8">Kanta Publication</h2>
 
-        {/* Features Section */}
-        <section className="bg-white p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-6 underline">About Us</h2>
-          <ul className="space-y-6">
-            {[{
-              icon: BookOpen,
-              text: "Bringing alive the knowledge of our senior citizens",
-            }, {
-              icon: Users,
-              text: "Connecting the young generation with ancient wisdom",
-            }, {
-              icon: Globe,
-              text: "Dreaming of India as Vishwa-Guru",
-            }, {
-              icon: Lightbulb,
-              text: "Using ancient knowledge to innovate and create",
-            }].map((item, index) => (
-              <li key={index} className="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
-                <item.icon className="w-10 h-10 text-gray-700 mr-4" />
-                <span className="text-lg text-gray-800 font-medium">{item.text}</span>
-              </li>
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-4">
+              <p>
+                Kanta Publication House is dedicated to preserving Indian culture and traditions through the written
+                word. Our primary objective is to encourage older generations to document their experiences and
+                knowledge.
+              </p>
+              <p>
+                We focus on themes from ancient manuscripts and treaties, aiming to use timeless wisdom to solve modern
+                challenges.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <p>
+                Our first publication, <span className="font-semibold">"Units of Measurement through Ancient Treaties"</span>,
+                explores how ancient temples and wells were built with remarkable precision.
+              </p>
+              <p>
+                Our vision is to contribute to India's journey as a "Vishwa Guru," sharing the wisdom once spread across
+                the world.
+              </p>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {[
+              { icon: <BookOpen className="w-8 h-8 text-gray-700 shrink-0" />, text: "Bringing alive the knowledge of our senior citizens" },
+              { icon: <Users className="w-8 h-8 text-gray-700 shrink-0" />, text: "Connecting the young generation with ancient wisdom" },
+              { icon: <Globe className="w-8 h-8 text-gray-700 shrink-0" />, text: "Dreaming of India as Vishwa-Guru" },
+              { icon: <Lightbulb className="w-8 h-8 text-gray-700 shrink-0" />, text: "Using ancient knowledge to innovate and create" },
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                {item.icon}
+                <p className="text-gray-800 m-0">{item.text}</p>
+              </div>
             ))}
-          </ul>
-        </section>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default Publication;
+}
