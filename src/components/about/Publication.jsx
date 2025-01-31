@@ -1,10 +1,15 @@
 'use client';
 
 import { BookOpen, Users, Globe, Lightbulb } from 'lucide-react';
+import { Roboto } from "next/font/google";
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 export default function Publication() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white   border-b-2 border-black                    ">
       {/* Orange Banner */}
       <div className="w-full bg-[#F7A034] py-16 mb-8">
         <h1 className="text-center text-[3.5rem] font-serif text-black">About Us</h1>
@@ -18,22 +23,22 @@ export default function Publication() {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-4">
-              <p>
+              <p className={` ${roboto.className}`}>
                 Kanta Publication House is dedicated to preserving Indian culture and traditions through the written
                 word. Our primary objective is to encourage older generations to document their experiences and
                 knowledge.
               </p>
-              <p>
+              <p className={` ${roboto.className}`}>
                 We focus on themes from ancient manuscripts and treaties, aiming to use timeless wisdom to solve modern
                 challenges.
               </p>
             </div>
             <div className="space-y-4">
-              <p>
+              <p className={` ${roboto.className}`}>
                 Our first publication, <span className="font-semibold">"Units of Measurement through Ancient Treaties"</span>,
                 explores how ancient temples and wells were built with remarkable precision.
               </p>
-              <p>
+              <p className={` ${roboto.className}`}>
                 Our vision is to contribute to India's journey as a "Vishwa Guru," sharing the wisdom once spread across
                 the world.
               </p>
