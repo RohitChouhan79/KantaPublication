@@ -1,7 +1,22 @@
+import Footer from "@/components/HomePage/Footer";
+import { Navbar } from "@/components/HomePage/Navbar";
 import React from "react";
 
 export default function AboutPage() {
   return (
+
+
+    <>
+    
+  
+
+<Navbar/>
+
+
+
+
+
+
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-orange-400 py-16">
@@ -79,5 +94,8 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+
+    <Footer/>
+    </>
   );
 }
