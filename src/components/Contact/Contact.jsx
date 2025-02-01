@@ -114,7 +114,7 @@ export default function Contact() {
           
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.3422144531623!2d77.45405827778544!3d23.184655640358255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6cbd30c17efbc257%3A0x5676346915323d5e!2sflourishers%20edge%20pvt%20ltd!5e0!3m2!1sen!2sin!4v1724303844897!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6075620210922!2d77.4515332750969!3d23.184518979060563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c432232c97de1%3A0xb51e23a24cd21b20!2sSmart%20Space%20danish%20nagar!5e0!3m2!1sen!2sin!4v1738380373101!5m2!1sen!2sin"
               width="100%"
               height="300"
               allowFullScreen=""

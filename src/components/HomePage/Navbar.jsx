@@ -40,7 +40,7 @@ function MobileNav() {
 // Navbar Component
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-md px-4 py-3 md:px-6">
+    <nav className="sticky top-0 z-50 bg-white border-b-2 border-black shadow-md px-4 py-3 md:px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
