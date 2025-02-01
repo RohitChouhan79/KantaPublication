@@ -2,25 +2,27 @@ import React from "react";
 
 const Invite = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gradient-to-b from-gray-100 to-gray-200">
-      {/* First Section */}
+<div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gradient-to-b from-gray-100 to-gray-200 overflow-hidden">
+{/* First Section */}
       <section
-        className="bg-[#272974] p-6 sm:p-8 rounded-xl shadow-lg mb-8 w-full duration-300 hover:scale-105"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center leading-tight mb-4 sm:mb-6 drop-shadow-md">
-          We invite interested people to research, learn, and write with us
-          about India’s culture, manuscripts, treaties, traditions, and more.
-        </h1>
-        <p
-          className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 text-center"
-          data-aos="fade-right"
-          data-aos-delay="200"
-        >
-          Write and Publish with Us
-        </p>
-      </section>
+  className="bg-[#272974] p-6 sm:p-8 rounded-xl shadow-lg mb-8 w-full   hover:rounded-xl        transition-transform duration-500 transform hover:scale-105"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center leading-tight mb-4 sm:mb-6 drop-shadow-md">
+    We invite interested people to research, learn, and write with us
+    about India’s culture, manuscripts, treaties, traditions, and more.
+  </h1>
+  <p
+    className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 text-center"
+    data-aos="fade-right"
+    data-aos-delay="200"
+  >
+    Write and Publish with Us
+  </p>
+</section>
+
+
 
       {/* Second Section */}
       <section
