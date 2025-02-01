@@ -14,7 +14,7 @@ export default async function Home() {
       <div className="lg:px-6 lg:pt-6 lg:pb-4">
 
    
-        <Navbar userRole={auths.user.role}/>
+        <Navbar userRole={auths?.user?.role}/>
 
 {/* add a hero section 2  */}
 <Homepage/>
@@ -23,7 +23,7 @@ export default async function Home() {
 {/*  add blue  */}
 <Invite/>
 <Slogan/>
-<Footer user={auths.user}/>
+<Footer user={auths?.user}/>
 
 
 
