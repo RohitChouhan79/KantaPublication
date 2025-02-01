@@ -12,8 +12,9 @@ const navItems = [
 ];
 
 // MobileNav Component
-function MobileNav() {
+function MobileNav({ userRole }) {
   return (
+
     <Sheet>
       <SheetTrigger className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-300">
         <Menu className="h-6 w-6 text-black" />
@@ -38,7 +39,7 @@ function MobileNav() {
 }
 
 // Navbar Component
-export function Navbar() {
+export function Navbar({ userRole }) {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-2 border-black shadow-md px-4 py-3 md:px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -65,11 +66,20 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
+          {/* Conditional Dashboard Link */}
+          {userRole && (
+            <Link
+              href="/dashboard"
+              className="text-lg lg:text-xl text-gray-700 hover:text-[#F07347] transition-colors whitespace-nowrap font-medium"
+            >
+              Dashboard
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <MobileNav />
+          <MobileNav userRole={userRole} />
         </div>
       </div>
     </nav>
