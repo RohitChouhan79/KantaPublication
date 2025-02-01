@@ -1,15 +1,29 @@
-import React from 'react';
+import Publication from '@/components/about/Publication'
+import TeamSection from '@/components/about/TeamSection'
+import Footer from '@/components/HomePage/Footer'
+import { Navbar } from '@/components/HomePage/Navbar'
+import React from 'react'
 
-async function Page() {
-
-
+const page = () => {
   return (
-    <div>
-        <h1>About</h1>
-        <p>This is the about page</p>
-    </div>
-  );
+   <>
+   
+   
+   
+   <Navbar/>
+
+   <Publication/>
+   <TeamSection/>
+   <Footer/>
+   
+   
+   
+   
+   
+   
+   
+   </>
+  )
 }
 
-// export const dynamic = "force-dynamic"
-export default Page;
+export default page

@@ -1,3 +1,6 @@
+import Contact from '@/components/Contact/Contact';
+import Footer from '@/components/HomePage/Footer';
+import { Navbar } from '@/components/HomePage/Navbar';
 import React from 'react';
 
 async function Page() {
@@ -5,8 +8,12 @@ async function Page() {
 
   return (
     <div>
-        <h1>Contact</h1>
-        <p>This is the Contact page</p>
+
+
+      <Navbar/>
+     <Contact/>
+
+     <Footer/>
     </div>
   );
 }

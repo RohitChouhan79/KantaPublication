@@ -2,85 +2,85 @@ import React from "react";
 
 const Invite = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-screen p-6 border-b-4 border-red-400"
-    >
-      {/* First Section with Full Width */}
-      <div
-        className="bg-purple-700 p-8 rounded-lg shadow-xl mb-8 w-full"
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gradient-to-b from-gray-100 to-gray-200">
+      {/* First Section */}
+      <section
+        className="bg-[#272974] p-6 sm:p-8 rounded-xl shadow-lg mb-8 w-full duration-300 hover:scale-105"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg text-center transition-transform duration-500 ease-in-out hover:scale-105">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center leading-tight mb-4 sm:mb-6 drop-shadow-md">
           We invite interested people to research, learn, and write with us
-          about India’s culture, manuscripts, treaties, tradition, and everything.
+          about India’s culture, manuscripts, treaties, traditions, and more.
         </h1>
         <p
-          className="text-lg md:text-xl lg:text-2xl text-gray-200 font-semibold text-center transition-opacity duration-500 ease-in-out hover:opacity-80"
+          className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 text-center"
           data-aos="fade-right"
           data-aos-delay="200"
         >
           Write and Publish with Us
         </p>
-      </div>
+      </section>
 
-      {/* Second Section with Image and Content */}
-      <div
-        className="bg-orange-400 p-8 rounded-lg shadow-xl mb-8 w-full"
+      {/* Second Section */}
+      <section
+        className="bg-white p-6 sm:p-8 rounded-xl shadow-xl mb-8 w-full transition-shadow duration-300 hover:shadow-2xl"
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        <div className="flex flex-col md:flex-row items-center text-center md:text-left">
-          {/* First Image */}
+        <div className="flex flex-col lg:flex-row items-center text-center lg:text-left">
+          {/* Left Image */}
           <img
             src="/intro.jpg"
-            alt="Representation of our mission"
-            className="mb-4 md:mb-0 md:w-60 rounded-lg shadow-md md:mr-8 transform transition-transform duration-500 hover:scale-105"
+            alt="A representation of our mission"
+
+
+
+// img small
+
+            className="w-full sm:w-2/3 md:w-1/2 lg:w-60 rounded-lg shadow-md mb-4 lg:mb-0 lg:mr-6 transform transition-transform duration-300 hover:scale-105"
           />
 
           {/* Content */}
-          <div className="md:ml-8 w-full md:w-3/5 ">
-  <h2
-    className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 text-center"
-    data-aos="zoom-in"
-    data-aos-delay="300"
-  >
-    Introducing Ourselves
-  </h2>
-  <p
-  className="text-lg md:text-lg lg:text-xl text-gray-800 mb-6 mx-auto max-w-xl leading-relaxed transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-x-2 "
->
-  We are going to establish{" "}
-  <span className="text-blue-600 font-bold">ancient knowledge</span> as the
-  beam of the new generation so that their eagerness will be towards
-  knowledge, ethics, and{" "}
-  <span className="text-blue-600 font-bold">self-determination</span>, away
-  from distraction.
-</p>
+          <div className="lg:ml-10 w-full lg:w-3/5">
+            <h2
+              className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4 text-center lg:text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              Introducing Ourselves
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-4 sm:mb-6 mx-auto max-w-xl leading-relaxed">
+              We aim to establish{" "}
+              <span className="text-blue-600 font-bold">ancient knowledge</span>{" "}
+              as the beam of the new generation, inspiring their focus on knowledge,
+              ethics, and{" "}
+              <span className="text-blue-600 font-bold">self-determination</span>, away from
+              distraction.
+            </p>
 
+            {/* Button */}
+            <div
+              className="w-full flex justify-center lg:justify-center"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-110">
+                Link to About
+              </button>
+            </div>
+          </div>
 
-
-  {/* Button */}
-  <div
-    className="w-full flex justify-center"
-    data-aos="fade-up"
-    data-aos-delay="500"
-  >
-    <button className="bg-orange-500 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
-      Link to About
-    </button>
-  </div>
-</div>
-
-
-          {/* Second Image */}
+          {/* Right Image (Visible on lg screens) */}
           <img
             src="/intro.jpg"
-            alt="Representation of our mission"
-            className="hidden md:block md:w-60 rounded-lg shadow-md transform transition-transform duration-500 hover:scale-105"
+            alt="Another representation of our mission"
+            className="hidden lg:block lg:w-60 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
           />
         </div>
-      </div>
+      </section>
+
+      
     </div>
   );
 };
