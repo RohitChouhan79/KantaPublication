@@ -293,3 +293,25 @@ export async function getAdminUsers(page = 1, searchQuery = "") {
   }
 }
 
+
+export async function login(credentials) {
+  // console.log(credentials.email,"credentials-------------------->");
+  const email=credentials.email
+  try {
+    await dbConnect();
+      const user = await UserSchema.findOne({email});
+  // console.log(user,"user--------------------");
+
+      if (!user) throw new Error("Invalid username or password");
+      
+      const isCorrect = await bcrypt.compare(credentials.password,user.password);
+  // console.log(user);
+
+      if (!isCorrect) throw new Error("Invalid username or password");
+
+      return JSON.parse(JSON.stringify(user));
+  } catch (error) {
+      console.error("Login error:", error.message);
+      throw new Error("Authentication failed");
+  }
+}
