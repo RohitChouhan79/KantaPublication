@@ -1,24 +1,8 @@
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
-import bcrypt from "bcrypt"
-import dbConnect from "./lib/dbConnect";
-import UserSchema from "./models/UserSchema";
+import {login} from "./utils/User"
 
-async function login(credentials) {
-  try {
-      await dbConnect();
-      const user = await UserSchema.findOne({ email: credentials.email });
-      if (!user) throw new Error("Invalid username or password");
-      
-      const isCorrect = await bcrypt.compare(credentials.password, user.password);
-      if (!isCorrect) throw new Error("Invalid username or password");
 
-      return user;
-  } catch (error) {
-      console.error("Login error:", error.message);
-      throw new Error("Authentication failed");
-  }
-}
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
@@ -29,7 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       authorize: async (credentials) => {
         try {
           const user = await login(credentials);
-          return user || null;
+          return JSON.parse(JSON.stringify(user)) || null;
       } catch (error) {
           console.error("Authorization error:", error.message);
           throw new Error("Authorization failed");

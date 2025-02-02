@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaInstagram, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
 
 const Footer = ({user}) => {
+  console.log(user)
   return (
     <footer className="bg-gray-900 text-gray-200 py-8 mt-5">
       {/* Logo and Social Media Section */}
@@ -24,9 +25,12 @@ const Footer = ({user}) => {
 
           <div className="ml-3">
             <h1 className="text-2xl font-bold text-orange-500">
-            <Link href="/login">
-              Kanta Publication
-              </Link>
+            {user ? (
+  <span>Kanta Publication</span>
+) : (
+  <Link href="/login">Kanta Publication</Link>
+)}
+
             </h1>
             <p className="text-gray-400 text-sm">
               Preserving Culture and Knowledge
