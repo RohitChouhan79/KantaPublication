@@ -32,6 +32,14 @@ function MobileNav({ userRole }) {
               {item.name}
             </Link>
           ))}
+          {userRole && (
+            <Link
+              href="/dashboard"
+              className="block px-4 py-2 text-lg text-white hover:text-[#F07347] transition-colors"
+            >
+              Dashboard
+            </Link>
+          )}
         </nav>
       </SheetContent>
     </Sheet>
