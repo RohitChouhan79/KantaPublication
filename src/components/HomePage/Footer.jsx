@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FaInstagram, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
 
 const Footer = ({user}) => {
@@ -9,11 +10,13 @@ const Footer = ({user}) => {
         {/* Logo */}
         <div className="flex items-center mb-6 md:mb-0">
         <div className="bg-white h-32 w-32 shadow-lg flex items-center justify-center rounded transition-transform transform hover:scale-110       ">
-  <img
+        <img
     src="/logo.png"
     alt="Kanta Publication Logo"
     className="h-full w-full object-cover items-center ml-6"
   />
+
+
 </div>
 
 
@@ -21,7 +24,9 @@ const Footer = ({user}) => {
 
           <div className="ml-3">
             <h1 className="text-2xl font-bold text-orange-500">
+            <Link href="/login">
               Kanta Publication
+              </Link>
             </h1>
             <p className="text-gray-400 text-sm">
               Preserving Culture and Knowledge
