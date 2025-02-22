@@ -8,12 +8,7 @@ async function Page() {
 
   return (
     <div>
-
-
-      <Navbar/>
      <Contact/>
-
-     <Footer/>
     </div>
   );
 }

@@ -4,12 +4,9 @@ import Footer from '@/components/HomePage/Footer';
 import { Navbar } from '@/components/HomePage/Navbar';
 import React from 'react';
 
-async function Page() {
+async function Page({ searchParams }) {
   return (
     <div className="lg:px-6 lg:pt-6 lg:pb-4">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Main content: Sidebar + Dashboard */}
       <div className="flex flex-col md:flex-row flex-1">
         {/* Sidebar (Fixed Width on Large Screens, Full Width on Mobile) */}
@@ -23,8 +20,6 @@ async function Page() {
         </div>
       </div>
 
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

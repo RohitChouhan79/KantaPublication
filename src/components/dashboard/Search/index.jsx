@@ -56,12 +56,12 @@ export default function SearchComponent({
           placeholder={placeholder}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className={`w-full ${inputClassName}`}
+          className={`w-full text-black ${inputClassName}`}
         />
         <Button
           variant="outline"
           onClick={handleSearch}
-          className={`flex items-center space-x-2 ${buttonClassName}`}
+          className={`flex items-center space-x-2 bg-red-400 ${buttonClassName}`}
         >
           <Search className="h-5 w-5" />
           <span className="hidden sm:block">{buttonLabel}</span>

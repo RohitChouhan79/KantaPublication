@@ -1,14 +1,13 @@
-import Dashboard from '@/components/dashboard/Homepage/Homepage';
+import BooksHomepage from '@/components/dashboard/books';
 import { AppSidebar } from '@/components/dashboard/Sidebar';
-import Footer from '@/components/HomePage/Footer';
-import { Navbar } from '@/components/HomePage/Navbar';
 import React from 'react';
 
-async function Page() {
+async function Page({ searchParams }) {
+  const {query,page}=await searchParams
   return (
     <div className="lg:px-6 lg:pt-6 lg:pb-4">
       {/* Navbar */}
-      <Navbar />
+      
 
       {/* Main content: Sidebar + Dashboard */}
       <div className="flex flex-col md:flex-row flex-1">
@@ -18,13 +17,10 @@ async function Page() {
         </div>
 
         {/* Dashboard (Takes Remaining Space) */}
-        <div className="flex-1 p-4">
-          <Dashboard />
+        <div className="flex-1 p-4 text-white">
+          <BooksHomepage pageNo={page} query={query}/>
         </div>
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
