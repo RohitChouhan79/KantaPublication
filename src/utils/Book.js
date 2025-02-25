@@ -4,7 +4,8 @@ import dbConnect from "@/lib/dbConnect";
 import bookSchema from "@/models/bookSchema";
 import mongoose from "mongoose";
 
-export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about) => {
+export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url) => {
+    console.log(title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url)
     try {
         await dbConnect();
 
@@ -22,7 +23,8 @@ export const createBook = async (title, subtitle, author, format, release_year, 
             language,
             price,
             quantity_available: quantity_available || 1,
-            about
+            about,
+            image_url
         });
 
         const savedBook = await newBook.save();
@@ -43,8 +45,6 @@ export const getAllBooks = async (page = 1, searchQuery = "") => {
                 { title: { $regex: searchQuery, $options: "i" } },
                 { subtitle: { $regex: searchQuery, $options: "i" } },
                 { author: { $regex: searchQuery, $options: "i" } },
-                { price: { $regex: searchQuery, $options: "i" } },
-                { language: { $regex: searchQuery, $options: "i" } }
             ]
         } : {};
 

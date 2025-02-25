@@ -12,15 +12,12 @@ export default async function Home() {
     <>
       {/* Apply padding on larger screens, remove on mobile */}
       <div className="lg:px-6 lg:pt-6 lg:pb-4">
-        <Navbar userRole={auths?.user?.role} />
-
-        {/* add a hero section 2  */}
         <Homepage />
 
         {/*  add blue  */}
         <Invite />
         <Slogan />
-        <Footer user={auths?.user} />
+        {/* <Footer user={auths?.user} /> */}
 
         {/*  add blue  */}
         {/* <Invite />
