@@ -13,7 +13,7 @@ export const ourFileRouter={
     .onUploadComplete(() => {}),
     customerImage:f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
     .onUploadComplete(() => {}),
-    govermentIdImage:f(["text", "image", "video", "audio", "pdf"])
+    bookPDF:f(["pdf"])
     .onUploadComplete(() => {})
 } satisfies FileRouter;
 
