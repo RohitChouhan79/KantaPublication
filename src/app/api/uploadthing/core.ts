@@ -14,6 +14,8 @@ export const ourFileRouter={
     customerImage:f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
     .onUploadComplete(() => {}),
     bookPDF:f(["pdf"])
+    .onUploadComplete(() => {}),
+    eventsPdf:f(["pdf"])
     .onUploadComplete(() => {})
 } satisfies FileRouter;
 

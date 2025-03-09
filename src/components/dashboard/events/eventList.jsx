@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { deleteWritePublish } from "@/utils/WriteandPublish";
+import { deleteEvent } from "@/utils/Event";
 
-export default function PublishList({ Publish }) {
+export default function EventList({ events }) {
   const [open, setOpen] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
 
@@ -15,7 +15,7 @@ export default function PublishList({ Publish }) {
 
   const handleConfirmDelete = async () => {
     if (selectedId) {
-      await deleteWritePublish(selectedId);
+      await deleteEvent(selectedId);
     }
     setOpen(false);
     setSelectedId(null);
@@ -33,25 +33,25 @@ export default function PublishList({ Publish }) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {Publish?.map((publish) => (
-            <TableRow key={publish?._id} className="border-b">
-              <TableCell className="font-semibold capitalize">{publish?.title}</TableCell>
+          {events?.map((event) => (
+            <TableRow key={event?._id} className="border-b">
+              <TableCell className="font-semibold capitalize">{event?.title}</TableCell>
               
               <TableCell>
-                <a href={publish?.registration_link} target="_blank" rel="noopener noreferrer">
+                <a href={event?.registration_link} target="_blank" rel="noopener noreferrer">
                   <Button variant="contained" color="primary">Register</Button>
                 </a>
               </TableCell>
               
               <TableCell>
-                {publish?.details_pdf_url ? (
+                {event?.details_pdf_url ? (
                   <Button
                     variant="contained"
                     color="secondary"
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = publish?.details_pdf_url;
-                      link.download = "Book_Details.pdf";
+                      link.href = event?.details_pdf_url;
+                      link.download = "events_Details.pdf";
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
@@ -68,7 +68,7 @@ export default function PublishList({ Publish }) {
                   <Button
                     variant="contained"
                     style={{ backgroundColor: "red", color: "white" }}
-                    onClick={() => handleDeleteClick(publish?._id)}
+                    onClick={() => handleDeleteClick(event?._id)}
                   >
                     Delete
                   </Button>

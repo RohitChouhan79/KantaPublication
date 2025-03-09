@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { UploadButton } from "@/utils/uploadthing";
 import { useRouter } from "next/navigation";
-import { createWritePublish } from "@/utils/WriteandPublish";
+import { createEvent } from "@/utils/Event";
 
-const PublishDialog = ({ open, onClose }) => {
+const EventsDialog = ({ open, onClose }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",
@@ -55,13 +55,13 @@ const PublishDialog = ({ open, onClose }) => {
     if (!validateFields()) return;
 
     try {
-      const result = await createWritePublish(
+      const result = await createEvent(
         formData.title,
         formData.details_pdf_url,
         formData.registration_link
       );
       if (result.success) {
-        alert("Write Publish created successfully!");
+        alert("Events created successfully!");
         onClose();
         setFormData({
           title: "",
@@ -73,14 +73,14 @@ const PublishDialog = ({ open, onClose }) => {
         alert(result.error);
       }
     } catch (error) {
-      console.error("Error creating Write and Publish:", error);
-      alert("Failed to create Write and Publish");
+      console.error("Error creating Events:", error);
+      alert("Failed to create Events");
     }
   };
 
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
-      <DialogTitle>Create a Write and Publish us</DialogTitle>
+      <DialogTitle>Create a New Events</DialogTitle>
       <DialogContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {["title", "registration_link"].map((name) => (
@@ -101,7 +101,7 @@ const PublishDialog = ({ open, onClose }) => {
         <div className="grid gap-2 mt-4">
           <label>Upload PDF</label>
           {!formData.details_pdf_url ? (
-            <UploadButton endpoint="bookPDF" onClientUploadComplete={handleUpload} className="p-5" />
+            <UploadButton endpoint="eventsPdf" onClientUploadComplete={handleUpload} className="p-5" />
           ) : (
             <div className="flex items-center gap-4 border p-2 rounded">
               <button
@@ -130,4 +130,4 @@ const PublishDialog = ({ open, onClose }) => {
   );
 };
 
-export default PublishDialog;
+export default EventsDialog;
