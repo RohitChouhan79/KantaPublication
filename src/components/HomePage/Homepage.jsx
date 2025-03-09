@@ -45,7 +45,7 @@ const Homepage = () => {
 
         {/* Image Section with hover effect */}
         <div
-          className="md:w-1/2 w-full mt-8 md:mt-0"
+          className="md:w-1/2 w-full lg:pl-5 mt-8 md:mt-0"
           data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-delay="200"

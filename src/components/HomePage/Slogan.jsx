@@ -5,11 +5,11 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"]
 
 const Slogan = () => {
   return (
-    <div className="flex  border-t-2 border-black      border-b-2 border-black              flex-col md:flex-row p-6 sm:p-8  shadow-lg w-full transition-shadow duration-300 ">
+    <div className="flex  border-t-2 border-black      border-b-2             flex-col md:flex-row p-6 sm:p-8  shadow-lg w-full transition-shadow duration-300 ">
       {/* Horizontal Line at the End */}
       
       {/* Logo Section */}
-      <div className="mb-6 md:mb-0 flex justify-start md:justify-start">
+      <div className="mb-6 pl-4 md:mb-0 flex justify-start md:justify-start">
         <img
           src="/logo.png"
           alt="Company Logo"

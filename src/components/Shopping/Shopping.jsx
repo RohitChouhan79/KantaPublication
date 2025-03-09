@@ -4,7 +4,7 @@ const Shopping = () => {
   return (
   <>
   
-  <div className="bg-[#5e2a1b] text-white text-7xl text-center  font-semibold p-24" > Our Products</div>
+  <div className="bg-[#412118] text-white text-7xl text-center  font-semibold p-24" > Our Products</div>
   
   
   

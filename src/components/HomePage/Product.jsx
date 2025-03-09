@@ -2,7 +2,8 @@ import React from "react";
 
 const Product = () => {
   return (
-    <div className="mx-auto p-6 relative bg-white border rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6">
+    <div className="mx-auto p-6 bg-white border rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6">
+        
       {/* Image Section */}
       <div className="flex-shrink-0">
         <img
@@ -12,29 +13,31 @@ const Product = () => {
         />
       </div>
 
-      {/* "Our Products" Label */}
-      <div className="absolute right-0 top-0 text-2xl p-4 font-semibold transition-transform duration-300 hover:scale-110 sm:left-1/2 sm:-translate-x-1/2 sm:text-center">
-  Our Products
-</div>
 
       {/* Text Content */}
-      <div className="flex-1 text-center sm:text-left">
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
-          Maanoopkarnam
+      <div className="bg-red-500">
+      <h2 className="text-4xl font-bold text-end text-gray-800">
+          OUR PRODUCT
         </h2>
-        <p className="text-lg font-semibold text-blue-600 mt-1">₹ 395 /-</p>
+      <div className="flex-1  sm:text-left">
+    
+    <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
+      Maanoopkarnam
+    </h2>
+    <p className="text-lg font-semibold text-blue-600 mt-1">₹ 395 /-</p>
 
-        <p className="text-gray-600 text-sm mt-3">
-          The book is about the unit of measurement used to build Hindu temples
-          according to ancient Indian treatises <br /> and manuscripts. It explains
-          how these systems are highly precise and simple to use,<br /> making it
-          easier for the younger generation to understand and adapt in daily
-          life.
-        </p>
+    <p className="text-gray-600 text-sm mt-3">
+      The book is about the unit of measurement used to build Hindu temples
+      according to ancient Indian treatises <br /> and manuscripts. It explains
+      how these systems are highly precise and simple to use,<br /> making it
+      easier for the younger generation to understand and adapt in daily
+      life.
+    </p>
 
-        <button className="mt-5 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-blue-700 hover:scale-105">
-          Buy Now
-        </button>
+    <button className="mt-5 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-blue-700 hover:scale-105">
+      Buy Now
+    </button>
+  </div>
       </div>
     </div>
   );
