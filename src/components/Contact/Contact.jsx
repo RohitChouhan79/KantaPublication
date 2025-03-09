@@ -22,6 +22,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    //        geter seter func 
     console.log(user);
   };
 

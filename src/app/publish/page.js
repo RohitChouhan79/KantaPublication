@@ -1,3 +1,4 @@
+import WriteandPublish from '@/components/WriteandPublish/WriteandPublish';
 import React from 'react';
 
 async function Page() {
@@ -5,8 +6,7 @@ async function Page() {
 
   return (
     <div>
-        <h1>Publish page</h1>
-        <p>This is the Publish page</p>
+       <WriteandPublish/>
     </div>
   );
 }
