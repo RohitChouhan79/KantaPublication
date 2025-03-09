@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Book, Mail, Users, Edit, Home, Menu } from "lucide-react";
+import { Book, Mail, Users, Edit, Home, Menu,Calendar } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
@@ -12,7 +12,8 @@ const navItems = [
   { icon: Book, label: "Books", href: "/dashboard/books" },
   { icon: Mail, label: "Contact Us", href: "/dashboard/contact" },
   { icon: Users, label: "Users", href: "/dashboard/users" },
-  { icon: Edit, label: "Write & Publish", href: "/dashboard/write-publish" },
+  { icon: Edit, label: "Write & Publish", href: "/dashboard/writePublish" },
+  { icon: Calendar, label: "Events", href: "/dashboard/events" },
 ];
 
 export function AppSidebar() {
