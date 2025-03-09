@@ -8,16 +8,9 @@ const page = () => {
   return (
    <>
   
-
    <Publication/>
    <TeamSection/>
-   
-   
-   
-   
-   
-   
-   
+    
    </>
   )
 }

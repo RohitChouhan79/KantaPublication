@@ -1,3 +1,4 @@
+import Shopping from '@/components/Shopping/Shopping';
 import React from 'react';
 
 async function Page() {
@@ -5,8 +6,7 @@ async function Page() {
 
   return (
     <div>
-        <h1>Shopping</h1>
-        <p>This is the Shoping page</p>
+       <Shopping/>
     </div>
   );
 }

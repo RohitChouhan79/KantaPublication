@@ -6,6 +6,7 @@ import Slogan from "@/components/HomePage/Slogan";
 import Footer from "@/components/HomePage/Footer";
 
 import { auth } from "@/auth";
+import Product from "@/components/HomePage/Product";
 export default async function Home() {
   const auths = await auth();
   return (
@@ -17,6 +18,7 @@ export default async function Home() {
         {/*  add blue  */}
         <Invite />
         <Slogan />
+        <Product/>
         {/* <Footer user={auths?.user} /> */}
 
         {/*  add blue  */}
