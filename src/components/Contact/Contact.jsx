@@ -1,5 +1,6 @@
 'use client';
 
+import { createContact } from "@/utils/ContactUs";
 import { useState } from "react";
 
 export default function Contact() {
@@ -12,6 +13,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [showPopup, setShowPopup] = useState(false); // State for popup
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prevUser) => ({
@@ -20,10 +23,31 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    //        geter seter func 
-    console.log(user);
+
+    const response = await createContact(
+      user.first_name,
+      user.last_name,
+      user.email,
+      user.phone,
+      user.subject,
+      user.message
+    );
+
+    if (response.success) {
+      setShowPopup(true); // Show success popup
+      setUser({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      alert("Error: " + response.error);
+    }
   };
 
   return (
@@ -92,17 +116,16 @@ export default function Contact() {
               onChange={handleChange}
             ></textarea>
             <div className="flex justify-end px-4 sm:px-8">
-  <button
-    type="submit"
-    className="bg-[#F4F4F1]                            text-black px-5 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#e0623b] transition-all "
-  >
-    Submit
-  </button>
-</div>
-
+              <button
+                type="submit"
+                className="bg-[#F4F4F1] text-black px-5 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#e0623b] transition-all "
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
-        
+
         <div className="w-full md:w-2/5 space-y-4">
           <div className="space-y-2">
             <p className="px-5 py-2 border border-black rounded-full bg-[#F5D549] text-black font-bold">
@@ -112,7 +135,7 @@ export default function Contact() {
               Email Id: kantapublication@gmail.com
             </p>
           </div>
-          
+
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6075620210922!2d77.4515332750969!3d23.184518979060563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c432232c97de1%3A0xb51e23a24cd21b20!2sSmart%20Space%20danish%20nagar!5e0!3m2!1sen!2sin!4v1738380373101!5m2!1sen!2sin"
@@ -126,6 +149,22 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      {/* Success Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-xl font-bold text-black">Thank you for connecting with us!</h2>
+            <p className="text-black">We will contact you soon.</p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="mt-4 px-6 py-2 bg-[#e0623b] text-white rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

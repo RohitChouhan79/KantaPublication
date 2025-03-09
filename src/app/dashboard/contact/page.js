@@ -1,4 +1,5 @@
 import BooksHomepage from '@/components/dashboard/books';
+import ContactPage from '@/components/dashboard/Contact/ContactPage';
 import { AppSidebar } from '@/components/dashboard/Sidebar';
 import React from 'react';
 
@@ -18,7 +19,7 @@ async function Page({ searchParams }) {
 
         {/* Dashboard (Takes Remaining Space) */}
         <div className="flex-1 p-4 text-white">
-          {/* <BooksHomepage pageNo={page} query={query}/> */}
+          <ContactPage pageNo={page} query={query}/>
         </div>
       </div>
     </div>
