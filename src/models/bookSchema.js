@@ -1,10 +1,15 @@
 import mongoose from "mongoose";
+import slugify from "slugify";
 
 const bookSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: true,
+    },
+    slug: {
+      type: String,
+      unique: true,
     },
     subtitle: {
       type: String,
@@ -24,7 +29,7 @@ const bookSchema = new mongoose.Schema(
       required: true,
     },
     features: {
-      type: [String], // e.g., ["Multicolor"]
+      type: [String],
       default: [],
     },
     language: {
@@ -44,13 +49,32 @@ const bookSchema = new mongoose.Schema(
       required: true,
     },
     image_url: {
-      type: String, // URL of the book cover or image
-      required: false, // Make it optional if not every book has an image
+      type: String,
+    },
+    amazon_link: {
+      type: String,
     },
   },
   {
-    timestamps: true, // Automatically add `createdAt` and `updatedAt` fields
+    timestamps: true,
   }
 );
+
+// Pre-save hook to generate a unique slug
+bookSchema.pre("save", async function (next) {
+  if (this.isModified("title")) {
+    let slug = slugify(this.title, { lower: true, strict: true });
+    let uniqueSlug = slug;
+    let count = 1;
+
+    while (await mongoose.models.Book.findOne({ slug: uniqueSlug })) {
+      uniqueSlug = `${slug}-${count}`;
+      count++;
+    }
+
+    this.slug = uniqueSlug;
+  }
+  next();
+});
 
 export default mongoose.models.Book || mongoose.model("Book", bookSchema);

@@ -5,10 +5,10 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"]
 
 const Slogan = () => {
   return (
-    <div className="flex  border-t-2 border-black      border-b-2             flex-col md:flex-row p-6 sm:p-8  shadow-lg w-full transition-shadow duration-300 ">
+    <div className="  border-t-2 border-black      border-b-2   p-6 sm:p-8  shadow-lg w-full transition-shadow duration-300 ">
       {/* Horizontal Line at the End */}
       
-      {/* Logo Section */}
+      <div className="container mx-auto flex flex-col md:flex-row ">{/* Logo Section */}
       <div className="mb-6 pl-4 md:mb-0 flex justify-start md:justify-start">
         <img
           src="/logo.png"
@@ -25,7 +25,7 @@ const Slogan = () => {
             Where women are worshiped, there lives the Gods.
           </p>
         </div>
-      </div>
+      </div></div>
     </div>
   );
 };

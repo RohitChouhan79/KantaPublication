@@ -1,46 +1,56 @@
-import React from "react";
+"use client"
+import { getAllBooks } from "@/utils/Book";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
-const Product = () => {
+
+const Shopping = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await getAllBooks();
+      if (response.success) {
+        setProducts(response.data);
+      } else {
+        console.error(response.error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const featuredProduct = products[0];
+
   return (
-    <div className="mx-auto p-6 bg-white border rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6">
-        
-      {/* Image Section */}
-      <div className="flex-shrink-0">
-        <img
-          src="/ourProduct.jpg" // Replace with actual image path
-          alt="Maanoopkarnam Book"
-          className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-        />
-      </div>
+    <div className="p-8 container mx-auto">
+      <h1 className="text-5xl font-serif text-end">Our Products</h1>
 
+      {featuredProduct && (
+        <div className="flex flex-col lg:flex-row items-center gap-8 ">
+          <div className="w-full lg:w-1/3 h-[300px] md:h-[500px]">
+            <img
+              src={featuredProduct.image_url}
+              alt={featuredProduct.title}
+              className="w-full h-full object-contain "
+            />
+          </div>
 
-      {/* Text Content */}
-      <div className="bg-red-500">
-      <h2 className="text-4xl font-bold text-end text-gray-800">
-          OUR PRODUCT
-        </h2>
-      <div className="flex-1  sm:text-left">
-    
-    <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
-      Maanoopkarnam
-    </h2>
-    <p className="text-lg font-semibold text-blue-600 mt-1">₹ 395 /-</p>
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-2xl md:text-4xl font-serif mb-4">{featuredProduct.title}</h2>
+            <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">₹ {featuredProduct.price}</p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {featuredProduct.about}
+            </p>
 
-    <p className="text-gray-600 text-sm mt-3">
-      The book is about the unit of measurement used to build Hindu temples
-      according to ancient Indian treatises <br /> and manuscripts. It explains
-      how these systems are highly precise and simple to use,<br /> making it
-      easier for the younger generation to understand and adapt in daily
-      life.
-    </p>
-
-    <button className="mt-5 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-blue-700 hover:scale-105">
-      Buy Now
-    </button>
-  </div>
-      </div>
+            <Link href="/shopping">
+              <button className="inline-block bg-[#2F2E83] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#24236b] transition">Show All Products</button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Product;
+export default Shopping;

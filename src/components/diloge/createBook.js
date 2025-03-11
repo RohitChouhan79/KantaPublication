@@ -19,6 +19,7 @@ const BookDialog = ({ open, onClose }) => {
     quantity_available: "",
     about: "",
     image_url: "",
+    amazon_link:"",
   });
   
   const [errors, setErrors] = useState({});
@@ -38,7 +39,7 @@ const BookDialog = ({ open, onClose }) => {
 
   const validateFields = () => {
     let newErrors = {};
-    const requiredFields = ["title", "subtitle", "author", "format", "release_year", "language", "price", "about"];
+    const requiredFields = ["title", "subtitle", "author", "format", "release_year", "language", "price", "about","amazon_link"];
 
     requiredFields.forEach((field) => {
       if (!formData[field]) {
@@ -58,7 +59,7 @@ const BookDialog = ({ open, onClose }) => {
         formData.title, formData.subtitle, formData.author, formData.format,
         formData.release_year, formData.features, formData.language,
         formData.price, formData.quantity_available, formData.about,
-        formData.image_url
+        formData.image_url,formData.amazon_link
       );
       if (result.success) {
         alert("Book created successfully!");
@@ -66,7 +67,7 @@ const BookDialog = ({ open, onClose }) => {
         setFormData({
           title: "", subtitle: "", author: "", format: "Hardcover",
           release_year: "", features: "", language: "", price: "",
-          quantity_available: "", about: "", image_url: "",
+          quantity_available: "", about: "", image_url: "",amazon_link:""
         });
         router.refresh()
       } else {
@@ -84,7 +85,7 @@ const BookDialog = ({ open, onClose }) => {
       <DialogTitle>Create a New Book</DialogTitle>
       <DialogContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {["title", "subtitle", "author", "language", "price", "quantity_available", "release_year", "features"].map((name) => (
+          {["title", "subtitle", "author", "language", "price", "quantity_available", "release_year", "features","amazon_link"].map((name) => (
             <div key={name}>
               <label>{name.replace("_", " ").toUpperCase()}</label>
               <input

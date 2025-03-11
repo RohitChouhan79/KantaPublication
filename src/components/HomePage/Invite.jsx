@@ -1,11 +1,12 @@
+import Link from "next/link";
 import React from "react";
 
 const Invite = () => {
   return (
-<div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gradient-to-b from-gray-100 to-gray-200 overflow-hidden">
+<div className="bg-[#272974]  p-6 bg-gradient-to-b from-gray-100 to-gray-200 overflow-hidden">
 {/* First Section */}
       <section
-  className="bg-[#272974] p-6 sm:p-8 rounded-xl shadow-lg mb-8 w-full   hover:rounded-xl        transition-transform duration-500 transform hover:scale-105"
+  className="bg-[#272974] container mx-auto p-6 sm:p-8 rounded-xl shadow-lg mb-8 w-full   hover:rounded-xl        transition-transform duration-500 transform "
   data-aos="fade-up"
   data-aos-duration="1000"
 >
@@ -14,11 +15,11 @@ const Invite = () => {
     about India’s culture, manuscripts, treaties, traditions, and more.
   </h1>
   <p
-    className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 text-center"
+    className="text-base sm:text-lg md:text-xl font-semibold text-[#F07347] text-center"
     data-aos="fade-right"
     data-aos-delay="200"
   >
-    Write and Publish with Us
+    <Link href="/publish">Write and Publish with Us</Link>
   </p>
 </section>
 
@@ -26,7 +27,7 @@ const Invite = () => {
 
       {/* Second Section */}
       <section
-        className="bg-white p-6 sm:p-8 rounded-xl shadow-xl mb-8 w-full transition-shadow duration-300 hover:shadow-2xl"
+        className="container mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl mb-8 w-full transition-shadow duration-300 hover:shadow-2xl"
         data-aos="fade-left"
         data-aos-duration="1000"
       >
@@ -54,10 +55,10 @@ const Invite = () => {
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-4 sm:mb-6 mx-auto max-w-xl leading-relaxed">
               We aim to establish{" "}
-              <span className="text-blue-600 font-bold">ancient knowledge</span>{" "}
+              <span className="text-[#F07347] font-bold">ancient knowledge</span>{" "}
               as the beam of the new generation, inspiring their focus on knowledge,
               ethics, and{" "}
-              <span className="text-blue-600 font-bold">self-determination</span>, away from
+              <span className="text-[#F07347] font-bold">self-determination</span>, away from
               distraction.
             </p>
 
@@ -67,9 +68,9 @@ const Invite = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-110">
+              <Link href="/about"><button className="w-full sm:w-auto bg-[#2F2E83] hover:bg-[#F07347] text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-110">
                 Link to About
-              </button>
+              </button></Link>
             </div>
           </div>
 

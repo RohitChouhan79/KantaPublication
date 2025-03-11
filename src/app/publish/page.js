@@ -1,9 +1,7 @@
 import WriteandPublish from '@/components/WriteandPublish/WriteandPublish';
 import React from 'react';
 
-async function Page() {
-
-
+async function Page() { 
   return (
     <div>
        <WriteandPublish/>

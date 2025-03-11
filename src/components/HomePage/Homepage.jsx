@@ -20,7 +20,7 @@ const Homepage = () => {
           data-aos-duration="1000"
         >
           <h1 className="text-xl md:text-2xl lg:text-4xl  text-gray-900 ">
-            <span className="text-black  hover:text-blue-700 font-bold                   transition-all duration-300">
+            <span className="text-black  hover:text-[#2F2E83] font-bold                   transition-all duration-300">
               Kanta Publication
             </span>
           </h1>
@@ -28,7 +28,7 @@ const Homepage = () => {
           {/* Paragraph with animation */}
           <p className="text-base md:text-base lg:text-xl text-gray-800 mt-4 leading-relaxed font-medium tracking-normal ">
             is a leading publication house with a passion for preserving{" "}
-            <span className="text-blue-700 font-bold">Indian culture</span> and
+            <span className="text-[#F07347]  font-bold">Indian culture</span> and
             traditions through writings.
           </p>
 
@@ -36,7 +36,7 @@ const Homepage = () => {
           <div className="mt-6 md:mt-8">
             <a
               href="/about"
-              className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-110"
+              className="inline-block  bg-[#2F2E83] hover:bg-[#F07347] text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-110"
             >
               Learn More About Us
             </a>

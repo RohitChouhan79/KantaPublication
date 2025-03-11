@@ -4,7 +4,7 @@ import dbConnect from "@/lib/dbConnect";
 import bookSchema from "@/models/bookSchema";
 import mongoose from "mongoose";
 
-export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url) => {
+export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url,amazon_link) => {
     console.log(title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url)
     try {
         await dbConnect();
@@ -24,7 +24,8 @@ export const createBook = async (title, subtitle, author, format, release_year, 
             price,
             quantity_available: quantity_available || 1,
             about,
-            image_url
+            image_url,
+            amazon_link
         });
 
         const savedBook = await newBook.save();
@@ -70,6 +71,19 @@ export const getBookById = async (id) => {
     }
 };
 
+export const getBookBySlug = async (slug) => {
+    try {
+        await dbConnect();
+        const book = await bookSchema.findOne({ slug });
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        return { success: true, data: JSON.parse(JSON.stringify(book)) };
+    } catch (error) {
+        console.error("Error fetching book by slug:", error);
+        return { success: false, error: error.message };
+    }
+};
 export const updateBook = async (id, updatedData) => {
     try {
         await dbConnect();

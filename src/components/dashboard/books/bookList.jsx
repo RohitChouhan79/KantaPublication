@@ -42,7 +42,7 @@ import { deleteBook } from "@/utils/Book";
             <TableHead>Language</TableHead>
             <TableHead>Price</TableHead>
             <TableHead>Quantity</TableHead>
-            {/* <TableHead>About</TableHead> */}
+            <TableHead>Amazone Link</TableHead>
             <TableHead>Action</TableHead>
             </TableRow>
         </TableHeader>
@@ -67,7 +67,7 @@ import { deleteBook } from "@/utils/Book";
                 <TableCell className={`font-semibold ${book?.quantity_available > 0 ? "text-green-600" : "text-red-600"}`}>
                 {book?.quantity_available}
                 </TableCell>
-                {/* <TableCell className="text-sm max-w-xs truncate">{book?.about}</TableCell> */}
+                <TableCell className="text-sm max-w-xs truncate"><a href={book?.amazon_link}>Click Here</a></TableCell>
                 <TableCell>
                 <button className="bg-blue-500 text-white px-3 py-1 rounded mr-2" onClick={() => handleUpdateClick(book)}>Update</button>
                 <button className="bg-red-500 text-white px-3 py-1 rounded" onClick={() => handleDeleteClick(book)}>Delete</button>
