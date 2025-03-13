@@ -2,9 +2,12 @@ import Dashboard from '@/components/dashboard/Homepage/Homepage';
 import { AppSidebar } from '@/components/dashboard/Sidebar';
 import Footer from '@/components/HomePage/Footer';
 import { Navbar } from '@/components/HomePage/Navbar';
+import { getTotalCounts } from '@/utils/Book';
 import React from 'react';
 
 async function Page({ searchParams }) {
+  const alldetails= await getTotalCounts()
+  console.log(alldetails)
   return (
     <div className="lg:px-6 lg:pt-6 lg:pb-4">
       {/* Main content: Sidebar + Dashboard */}
@@ -16,7 +19,7 @@ async function Page({ searchParams }) {
 
         {/* Dashboard (Takes Remaining Space) */}
         <div className="flex-1 p-4">
-          <Dashboard />
+          <Dashboard data={alldetails}/>
         </div>
       </div>
 

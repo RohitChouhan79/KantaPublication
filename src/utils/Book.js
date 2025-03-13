@@ -2,6 +2,9 @@
 
 import dbConnect from "@/lib/dbConnect";
 import bookSchema from "@/models/bookSchema";
+import ContactUsSchema from "@/models/ContactUsSchema";
+import EventsSchema from "@/models/EventsSchema";
+import WriteandPublishSchema from "@/models/WriteandPublishSchema";
 import mongoose from "mongoose";
 
 export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url,amazon_link) => {
@@ -116,3 +119,32 @@ export const getBooksByAuthor = async (author) => {
         return { success: false, error: error.message };
     }
 };
+
+
+
+export const getTotalCounts = async () => {
+    try {
+        await dbConnect();
+      const [
+        bookCount,
+        eventCount,
+        writePublishCount,
+        contactCount
+      ] = await Promise.all([
+        bookSchema.countDocuments(),
+        EventsSchema.countDocuments(),
+        WriteandPublishSchema.countDocuments(),
+        ContactUsSchema.countDocuments(),
+      ]);
+  
+      return {
+        totalBooks: JSON.parse(JSON.stringify(bookCount)),
+        totalEvents: JSON.parse(JSON.stringify(eventCount)),
+        totalWritePublish: JSON.parse(JSON.stringify(writePublishCount)),
+        totalContacts: JSON.parse(JSON.stringify(contactCount)),
+      };
+    } catch (error) {
+      console.error("Error fetching total counts:", error);
+      throw error;
+    }
+  };

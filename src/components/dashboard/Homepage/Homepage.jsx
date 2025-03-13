@@ -3,11 +3,11 @@ import { useState } from "react";
 import { Book, Mail, Calendar, Edit } from "lucide-react";
 import { BookChart } from "../book-chart";
 
-export default function Dashboard() {
-  const [totalBooks, setTotalBooks] = useState(150);
-  const [totalContacts, setTotalContacts] = useState(75);
-  const [activeEvents, setActiveEvents] = useState(10);
-  const [totalPublished, setTotalPublished] = useState(50);
+export default function Dashboard({data}) {
+  const [totalBooks, setTotalBooks] = useState(data.totalBooks);
+  const [totalContacts, setTotalContacts] = useState(data.totalContacts);
+  const [activeEvents, setActiveEvents] = useState(data.totalEvents);
+  const [totalPublished, setTotalPublished] = useState(data.totalWritePublish);
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Dashboard() {
       <div className="p-4">
         {/* <h3 className="text-lg font-semibold">Book Inventory</h3> */}
         <div className="pl-2">
-          <BookChart />
+          {/* <BookChart /> */}
         </div>
       </div>
     </div>
