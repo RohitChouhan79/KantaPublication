@@ -1,12 +1,20 @@
 import Shopping from '@/components/Shopping/Shopping';
+import { getAllBooks } from '@/utils/Book';
 import React from 'react';
 
-async function Page() {
 
+export const metadata = {
+  title: "Shopping - Kanta Publication",
+  description: "Explore our collection of ancient manuscript systems and related publications.",
+}
+
+async function Page() {
+  const products = await getAllBooks();
+  // console.log(products.data);
 
   return (
     <div>
-       <Shopping/>
+       <Shopping products={products.data}/>
     </div>
   );
 }

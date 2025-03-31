@@ -6,6 +6,7 @@ import UpdateBookDialog from "@/components/diloge/updateBook";
 import { deleteBook } from "@/utils/Book";
 
     export default function BookList({ books }) {
+      // console.log(books)
         const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
         const [updateDialogOpen, setUpdateDialogOpen] = useState(false);
         const [selectedBook, setSelectedBook] = useState(null);
@@ -35,6 +36,12 @@ import { deleteBook } from "@/utils/Book";
             <TableHead>Image</TableHead>
             <TableHead>Title</TableHead>
             <TableHead>Subtitle</TableHead>
+            <TableHead>Publisher</TableHead>
+            <TableHead>ISBN</TableHead>
+            <TableHead>Page</TableHead>
+            <TableHead>Booksize</TableHead>
+            <TableHead>Weight</TableHead>
+            <TableHead>Extra thing</TableHead>
             <TableHead>Author</TableHead>
             <TableHead>Format</TableHead>
             <TableHead>Release Year</TableHead>
@@ -58,8 +65,13 @@ import { deleteBook } from "@/utils/Book";
                 </TableCell>
                 <TableCell className="font-semibold capitalize ">{book?.title}</TableCell>
                 <TableCell className="capitalize">{book?.subtitle}</TableCell>
+                <TableCell className="capitalize">{book?.publisher}</TableCell>
+                <TableCell className="capitalize">{book?.isbn}</TableCell>
+                <TableCell className="capitalize">{book?.page}</TableCell>
+                <TableCell className="capitalize">{book?.booksize}</TableCell>
+                <TableCell className="capitalize">{book?.weight}</TableCell>
+                <TableCell className="capitalize">{book?.extrathing}</TableCell>
                 <TableCell className="capitalize">{book?.author}</TableCell>
-                <TableCell className="capitalize">{book?.format}</TableCell>
                 <TableCell>{book?.release_year}</TableCell>
                 <TableCell>{book?.features?.join(", ") || "N/A"}</TableCell>
                 <TableCell className="capitalize">{book?.language}</TableCell>

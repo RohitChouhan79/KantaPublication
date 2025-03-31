@@ -32,9 +32,9 @@ const Footer = ({user}) => {
 )}
 
             </h1>
-            <p className="text-gray-400 text-sm">
+            {/* <p className="text-gray-400 text-sm">
               Preserving Culture and Knowledge
-            </p>
+            </p> */}
           </div>
         </div>
 

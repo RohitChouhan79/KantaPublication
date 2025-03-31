@@ -29,10 +29,10 @@ const EventHomepage = () => {
       </div>
 
       {/* Events Section */}
-      <div className="w-full rounded-lg p-10 px-32">
+      <div className="w-full rounded-lg p-4 pt-5 md:pt-0 lg:p-10 lg:px-32">
         {events.length > 0 ? (
           events.map((event, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center pb-5 mb-5 last:border-none last:pb-0">
+            <div key={index} className="flex  md:flex-row gap-0 justify-between items-center pb-5 mb-5 last:border-none last:pb-0">
               {/* Event Title */}
               <span className="text-lg font-bold text-gray-700">{event.title}</span>
 

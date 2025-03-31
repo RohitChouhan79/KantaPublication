@@ -18,9 +18,9 @@ const Slogan = () => {
       </div>
 
       {/* Slogan Section */}
-      <div className="text-start md:text-left max-w-md space-y-4 mt-10">
+      <div className="text-start md:text-left  space-y-4 mt-10">
         <div className="flex flex-col leading-tight items-start md:items-start">
-          <p className="text-2xl md:text-3xl font-semibold">यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवताः</p>
+          <p className="text-2xl md:text-3xl font-semibold">यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवताः । मनुस्मृति ३/५६</p>
           <p className={`text-lg md:text-xl font-medium ${roboto.className}`}>
             Where women are worshiped, there lives the Gods.
           </p>

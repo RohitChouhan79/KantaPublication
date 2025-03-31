@@ -15,7 +15,31 @@ const bookSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    author: {
+    publisher: {
+      type: String,
+      required: true,
+    },
+    isbn: {
+      type: String,
+      required: true,
+    },
+    page: {
+      type: String,
+      // required: true,
+    },
+    booksize: {
+      type: String,
+      // required: true,
+    },
+    weight: {
+      type: String,
+      // required: true,
+    },
+    extrathing: {
+      type: String,
+      // required: true,
+    },
+    author: { 
       type: String,
       required: true,
     },

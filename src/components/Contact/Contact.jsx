@@ -134,12 +134,15 @@ export default function Contact() {
             <p className="px-5 py-2 border border-black rounded-full bg-[#F5D549] text-black font-bold">
               Email Id: kantapublication@gmail.com
             </p>
+            <p className="px-5 py-2 border border-black rounded-full bg-[#F5D549] text-black font-bold">
+            Address: D1/191 Smart Space Apartment, Phase 2, Danish Nagar, Bhopal, 462026
+            </p>
           </div>
 
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6075620210922!2d77.4515332750969!3d23.184518979060563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c432232c97de1%3A0xb51e23a24cd21b20!2sSmart%20Space%20danish%20nagar!5e0!3m2!1sen!2sin!4v1738380373101!5m2!1sen!2sin"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3141.815942814962!2d77.45597854139251!3d23.185345055394166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDExJzA4LjciTiA3N8KwMjcnMjkuMCJF!5e0!3m2!1sen!2sin!4v1743390282099!5m2!1sen!2sin"
+               width="100%"
               height="300"
               allowFullScreen=""
               loading="lazy"

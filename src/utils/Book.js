@@ -7,18 +7,23 @@ import EventsSchema from "@/models/EventsSchema";
 import WriteandPublishSchema from "@/models/WriteandPublishSchema";
 import mongoose from "mongoose";
 
-export const createBook = async (title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url,amazon_link) => {
+export const createBook = async (title, subtitle,publisher,isbn,page,booksize,weight,extrathing, author, format, release_year, features, language, price, quantity_available, about,image_url,amazon_link) => {
     console.log(title, subtitle, author, format, release_year, features, language, price, quantity_available, about,image_url)
     try {
         await dbConnect();
 
-        if (!title || !subtitle || !author || !format || !release_year || !language || !price || !about) {
+        if (!title || !subtitle||!publisher||!isbn || !author || !format || !release_year || !language || !price || !about) {
             return { success: false, error: 'All required fields must be provided.' };
         }
 
         const newBook = new bookSchema({
             title,
             subtitle,
+            publisher,
+            isbn,
+            page,
+            booksize,
+            weight,
             author,
             format,
             release_year,
@@ -52,6 +57,7 @@ export const getAllBooks = async (page = 1, searchQuery = "") => {
             ]
         } : {};
 
+        console.log("Query:", query);
         const books = await bookSchema.find(query).skip(skip).limit(pageSize);
         return { success: true, data: JSON.parse(JSON.stringify(books)) };
     } catch (error) {

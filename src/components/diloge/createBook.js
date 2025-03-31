@@ -10,6 +10,12 @@ const BookDialog = ({ open, onClose }) => {
   const [formData, setFormData] = useState({
     title: "",
     subtitle: "",
+    publisher:"",
+    isbn:"",
+    page:"",
+    booksize:"",
+    weight:"",
+    extrathing:"",
     author: "",
     format: "Hardcover",
     release_year: "",
@@ -39,7 +45,7 @@ const BookDialog = ({ open, onClose }) => {
 
   const validateFields = () => {
     let newErrors = {};
-    const requiredFields = ["title", "subtitle", "author", "format", "release_year", "language", "price", "about","amazon_link"];
+    const requiredFields = ["title", "subtitle", "publisher","isbn", "author", "format", "release_year", "language", "price", "about","amazon_link"];
 
     requiredFields.forEach((field) => {
       if (!formData[field]) {
@@ -56,7 +62,7 @@ const BookDialog = ({ open, onClose }) => {
 
     try {
       const result = await createBook(
-        formData.title, formData.subtitle, formData.author, formData.format,
+        formData.title, formData.subtitle,formData.publisher,formData.isbn,formData.page,formData.booksize,formData.weight,formData.extrathing ,formData.author, formData.format,
         formData.release_year, formData.features, formData.language,
         formData.price, formData.quantity_available, formData.about,
         formData.image_url,formData.amazon_link
@@ -65,7 +71,12 @@ const BookDialog = ({ open, onClose }) => {
         alert("Book created successfully!");
         onClose();
         setFormData({
-          title: "", subtitle: "", author: "", format: "Hardcover",
+          title: "", subtitle: "",publisher:"",
+          isbn:"",
+          page:"",
+          booksize:"",
+          weight:"",
+          extrathing:"", author: "", format: "Hardcover",
           release_year: "", features: "", language: "", price: "",
           quantity_available: "", about: "", image_url: "",amazon_link:""
         });
@@ -85,7 +96,7 @@ const BookDialog = ({ open, onClose }) => {
       <DialogTitle>Create a New Book</DialogTitle>
       <DialogContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {["title", "subtitle", "author", "language", "price", "quantity_available", "release_year", "features","amazon_link"].map((name) => (
+          {["title", "subtitle","publisher","isbn","page","booksize","weight","extrathing", "author", "language", "price", "quantity_available", "release_year", "features","amazon_link"].map((name) => (
             <div key={name}>
               <label>{name.replace("_", " ").toUpperCase()}</label>
               <input

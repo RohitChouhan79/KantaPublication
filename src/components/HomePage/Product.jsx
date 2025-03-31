@@ -24,7 +24,7 @@ const Shopping = () => {
 
   return (
     <div className="p-8 container mx-auto">
-      <h1 className="text-5xl font-serif text-end">Our Products</h1>
+      <h1 className="text-5xl mb-5 md:mb-16 lg:mb-0 font-serif text-end">Our Products</h1>
 
       {featuredProduct && (
         <div className="flex flex-col lg:flex-row items-center gap-8 ">
@@ -38,6 +38,8 @@ const Shopping = () => {
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-2xl md:text-4xl font-serif mb-4">{featuredProduct.title}</h2>
+        <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-4">{featuredProduct.subtitle}</h4>
+
             <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">₹ {featuredProduct.price}</p>
             <p className="text-gray-700 leading-relaxed mb-4">
               {featuredProduct.about}

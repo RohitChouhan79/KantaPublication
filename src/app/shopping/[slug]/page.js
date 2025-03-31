@@ -1,6 +1,8 @@
 import BookDetails from "@/components/BookDetails";
 import { getBookBySlug } from "@/utils/Book";
 
+// pages/book/[slug].js 
+
 async function page({ params }) { // Get all params (like { customerId: 'someId' })
 // 
 const customerId = params.slug;

@@ -34,7 +34,13 @@ const BookDetails = ({ book }) => {
         <p className="text-lg  md:text-xl text-gray-800 font-medium mb-10">by <strong className="text-black">{book.author}</strong></p>
 
         {/* Book Details */}
-        <p className="text-lg  md:text-xl text-gray-800 mb-4">{book.format} & Multicolor - {book.release_year}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">{book.format} & Multicolor - {book.release_year}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">Publisher:  {book.publisher}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">ISBN: {book.isbn}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">Page: {book.page}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">BookSize:{book.booksize}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">BookWeight:{book.weight}</p>
+        <p className="text-lg  md:text-xl text-gray-800 mb-2">Extra Thing:{book.extrathing}</p>
         <p className="text-lg  md:text-xl text-gray-800 mb-5">{book.language} Edition</p>
 
         {/* Price */}
