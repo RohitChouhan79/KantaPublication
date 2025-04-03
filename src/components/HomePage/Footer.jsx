@@ -64,7 +64,7 @@ const Footer = ({user}) => {
             </a>
             {/* YouTube */}
             <a
-              href="https://www.youtube.com/@kantapublication"
+              href="https://youtube.com/@ishita-w2r?si=hzuZknWraZfjZie5"
               target="_blank"
               rel="noopener noreferrer"
               className="                 text-red-500 hover:text-red-600 transition-transform transform hover:scale-110"
